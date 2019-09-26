@@ -1,8 +1,21 @@
 <html>
 <body>
-  <h1>我叫周智健.</h1>
+  <h1>我叫<span id="myname"></span></h1>
     <p>我的学号是<span id="studentnumber">18002090143</span>
     </p>
+    <img src="64EFS71V05RQ0001.jpg" style="border-radius:10px 20px 40px 80px">;
+    <img src="matrix.png">
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+      $(function(){
+        $.get("./Untitled-1.json",function(result){
+          
+          $("#myname").text(result.myname);
+          $("#studentnumber").text(result.studentnumber);
+          
+        });
+      })
+    </script>
 
 
 </body>
